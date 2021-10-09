@@ -40,6 +40,12 @@ const saveNote = (note) =>
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(note),
+  }).then(data => {
+    if (data) {
+      getAndRenderNotes();
+    } else {
+      console.log('Error');
+    }
   });
 
 const deleteNote = (id) =>
@@ -99,6 +105,7 @@ const handleNoteDelete = (e) => {
 const handleNoteView = (e) => {
   e.preventDefault();
   activeNote = JSON.parse(e.target.parentElement.getAttribute('data-note'));
+  console.log(activeNote);
   renderActiveNote();
 };
 
