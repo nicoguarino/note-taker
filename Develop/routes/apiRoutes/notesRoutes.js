@@ -38,6 +38,11 @@ router.delete('/notes/:id', (req, res) => {
 
     notes.splice(noteIndex, 1);
 
+    fs.writeFileSync(
+        path.join(__dirname, '../../db/db.json'),
+        JSON.stringify((notes), null, 2)
+    );
+
     return res.send('Note deleted');
 
 });
