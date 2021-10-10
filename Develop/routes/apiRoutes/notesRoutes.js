@@ -32,16 +32,16 @@ router.post('/notes', (req, res) => {
 });
 
 // delete function to work properly
-router.delete(`/notes/${id}`, (req, res) => {
+router.delete('/notes/:id', (req, res) => {
 
-    notes.Remove({id: req.body.id}, err => {
-        if (!err) {
-            return res.send('Note deleted!')
-        } else {
-            return res.send(err);
-        }
-    });
+    const noteIndex = notes.find(val => val.id === req.params.id);
+
+    notes.splice(noteIndex, 1);
+
+    return res.send('Note deleted');
+
 });
+
 
 
 
