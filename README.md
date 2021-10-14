@@ -25,7 +25,7 @@ No installation needed
 
 ## Code Sample <a name = "code-sample"></a>
 
-![Sample Code](https://github.com/nicoguarino/team-profile-generator/blob/main/images/sample_code.png?raw=true "Sample Code")
+![Sample Code](https://github.com/nicoguarino/note-taker/blob/main/images/sample_code.PNG?raw=true "Sample Code")
 
 ### Sample Code
 ```JavaScript Sample
